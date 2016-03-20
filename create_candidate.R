@@ -24,8 +24,8 @@ standardGeneric("create_candidate")}
 #' @export
 setMethod(f = "create_candidate",
           definition = function(name, delegates_won, party){
-            if (party == "Republican") total_delegates_needed<-1000
-            else total_delegates_needed<-2000
+            if (party == "Republican") total_delegates_needed<-1237
+            else total_delegates_needed<-2383
             delegates_needed<-total_delegates_needed - delegates_won
             return(new("Candidate", name = name, delegates_won = delegates_won, party = party, delegates_needed = delegates_needed))
           })

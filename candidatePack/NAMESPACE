@@ -1,0 +1,10 @@
+exportPattern("^[[:alpha:]]+")
+exportMethods(
+    "create_candidate",
+    "print",
+    "prop_needed",
+    "show" 
+)
+exportClasses(
+    "Candidate" 
+)

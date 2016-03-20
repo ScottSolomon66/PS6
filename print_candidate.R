@@ -18,20 +18,11 @@
 #' Obama<-new("Candidate", name = "Obama", delegates_won = 800, party = "Democrat", delegates_needed = 1200)
 #' print(Obama)
 #' @export
-setGeneric(name = "print",
-           def = function(x){
-             standardGeneric("print")},
-           signature = "Candidate"
-)
-#' @export
 setMethod(f = "print",
           signature = "Candidate",
           definition = function(x){
-            print(x)
-          }
-          )
-
-Obama<-new("Candidate", name = "Obama", delegates_won = 800, party = "Democrat", delegates_needed = 1200)
-print(Obama)
-
-?setGeneric
+            values<-list(x@name, x@delegates_won, x@party, x@delegates_needed)
+            labels<-c("name", "delegates won", "party", "delegates needed")
+            value_table<-rbind(labels, values)
+            show(value_table)
+          })
