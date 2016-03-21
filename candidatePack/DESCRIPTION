@@ -1,10 +1,10 @@
 Package: candidatePack
 Type: Package
-Title: What the package does (short line)
+Title: The candidatePack package looks at presidential candidate delegates and performs calculations
 Version: 1.0
 Date: 2016-03-19
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
-Depends: methods
+Author: Scott Solomon
+Maintainer: Scott Solomon <scott.solomon@wustl.edu>
+Depends:
+    methods
+RoxygenNote: 5.0.1

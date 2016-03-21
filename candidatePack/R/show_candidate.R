@@ -26,5 +26,3 @@ setMethod(f = "show",
             value_table<-rbind(labels, values)
             print(value_table)
           })
-
-show(Obama)
