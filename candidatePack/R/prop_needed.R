@@ -13,15 +13,20 @@
 #' Obama<-new("Candidate", name = "Obama", delegates_won = 800, party = "Democrat", delegates_needed = 1200)
 #' prop_needed(Obama)
 #' @export
+## setting a generic "prop_needed"
 setGeneric(name = "prop_needed",
+           ## setting the generic definition
            def = function(candidate, remaining_delegates){
              standardGeneric("prop_needed")
            })
 #' @export
+## setting the method for prop_needed
 setMethod(f = "prop_needed",
-          signature = "Candidate",
+          signature = "Candidate", # takes class Candidate
           definition = function(candidate, remaining_delegates){
+            ## calculates the proportion of delegates needed
             delegate_prop<-candidate@delegates_needed/remaining_delegates
+            ## returning the proportion of delegates
             return(delegate_prop)
           })
 

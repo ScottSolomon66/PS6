@@ -19,10 +19,15 @@
 #' show(Obama)
 #' @export
 setMethod(f = "show",
+          ## setting the method for show with class "Candidate"
           signature = "Candidate",
           definition = function(object){
+            ## extracting the values
             values<-list(object@name, object@delegates_won, object@party, object@delegates_needed)
+            ## creating labels
             labels<-c("name", "delegates won", "party", "delegates needed")
+            ## creating a table with labels and values
             value_table<-rbind(labels, values)
+            ## printing tables
             print(value_table)
           })

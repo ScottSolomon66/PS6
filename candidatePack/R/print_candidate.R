@@ -18,11 +18,17 @@
 #' Obama<-new("Candidate", name = "Obama", delegates_won = 800, party = "Democrat", delegates_needed = 1200)
 #' print(Obama)
 #' @export
+## setting the method for print for class "Candidate"
 setMethod(f = "print",
           signature = "Candidate",
+          ## defining the function
           definition = function(x){
+            ## extracting the values
             values<-list(x@name, x@delegates_won, x@party, x@delegates_needed)
+            ## creating lables
             labels<-c("name", "delegates won", "party", "delegates needed")
+            ## creating a table with values an labels
             value_table<-rbind(labels, values)
+            ## returning the table
             show(value_table)
           })

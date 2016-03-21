@@ -22,11 +22,17 @@ def = function(name, delegates_won, party){
 standardGeneric("create_candidate")}
 )
 #' @export
-setMethod(f = "create_candidate",
+## create_candidate
+## takes arguments of name, delegates won and party and creates an object of class "candidate"
+setMethod(f = "create_candidate",# defining the name
           definition = function(name, delegates_won, party){
+            ## checking to see whether it needs a Republican or Democratic candidate (difference # of delegates)
             if (party == "Republican") total_delegates_needed<-1237
+            ## democratic number
             else total_delegates_needed<-2383
+            ## calculates delegates needed
             delegates_needed<-total_delegates_needed - delegates_won
+            ## returns object of class "candidate"
             return(new("Candidate", name = name, delegates_won = delegates_won, party = party, delegates_needed = delegates_needed))
           })
 
